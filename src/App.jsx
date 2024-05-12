@@ -26,7 +26,7 @@ function App() {
   return (
     <>
       <div className="container">
-        <div className="flex">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 overflow-x-scroll h-[90vh] lg:h-[50vh] ">
           <Editor
             language="html"
             displayName="HTML"
@@ -46,7 +46,7 @@ function App() {
             onChange={setJs}
           />
         </div>
-        <div className="pane">
+        <div className="pane h-[50vh] border-2">
           <iframe
             title='output'
             sandbox='allow-scripts'

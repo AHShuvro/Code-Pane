@@ -29,27 +29,27 @@ const Editor = (props) => {
     return (
         <>
             <div className={` ${open ? " flex-1" : ""}`}>
-                <div className="flex justify-between gap-1 text-start p-2 bg-[#3D3D45]">
+                <div className="flex justify-between gap-1 text-start p-1 lg:p-2 bg-[#3D3D45]">
                     <p className='text-[#fff]'>{displayName}</p>
                     {
-                        open? <button onClick={() => setOpen(prevOpen => !prevOpen)} className='text-[#fff] pl-2 text-lg'>
-                        <RiCollapseDiagonalFill />
-                    </button> :
-                    <button onClick={() => setOpen(prevOpen => !prevOpen)} className='text-[#fff] pl-2 text-lg'>
-                    <IoExpandSharp />
-                </button>
+                        open ? <button onClick={() => setOpen(prevOpen => !prevOpen)} className='text-[#fff] pl-2 text-lg'>
+                            <RiCollapseDiagonalFill />
+                        </button> :
+                            <button onClick={() => setOpen(prevOpen => !prevOpen)} className='text-[#fff] pl-2 text-lg'>
+                                <IoExpandSharp />
+                            </button>
                     }
                 </div>
                 <AceEditor
-                    className='absolute'
+                    className='w-full h-full overflow-hidden'
                     mode={language}
                     theme="twilight"
                     value={value}
                     onChange={handleChange}
                     name="code-editor"
                     fontSize={14}
-                    width="100%"
-                    height="300px"
+                    width='100%'
+                    height="100%"
                     editorProps={{ $blockScrolling: true }}
                 />
             </div>
