@@ -43,7 +43,6 @@ const Editor = (props) => {
                 <AceEditor
                     className='w-full h-full overflow-hidden'
                     mode={language}
-                    theme="twilight"
                     value={value}
                     onChange={handleChange}
                     name="code-editor"
