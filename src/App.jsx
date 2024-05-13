@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Editor from './Components/Editor';
+import Hooks from './Components/Hooks';
 
 function App() {
-  const [html, setHtml] = useState('');
-  const [css, setCss] = useState('');
-  const [js, setJs] = useState('');
+  const [html, setHtml] = Hooks('html', '');
+  const [css, setCss] = Hooks('css', '');
+  const [js, setJs] = Hooks('js', '');
   const [srcDoc , setSrcDoc] = useState();
 
   useEffect(() => {
