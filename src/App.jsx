@@ -29,7 +29,7 @@ function App() {
   return (
     <>
 
-      <div className="container">
+      <div className="">
         <NavigationBar />
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 overflow-x-scroll h-[90vh] lg:h-[50vh] ">
           <Editor
