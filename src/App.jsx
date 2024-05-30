@@ -5,20 +5,11 @@ import Hooks from './Components/Hooks';
 import NavigationBar from './Components/NavigationBar';
 
 function App() {
-  const [html, setHtml] = Hooks('html', `<!DOCTYPE html>
-  <html lang="en">
-      <head>
-          <meta charset="UTF-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>Document</title>
-      </head>
-      <body>
-          
-      </body>
-  </html>`);
+  const [html, setHtml] = Hooks('html', '');
   const [css, setCss] = Hooks('css', '');
   const [js, setJs] = Hooks('js', '');
   const [srcDoc, setSrcDoc] = useState();
+  
 
   useEffect(() => {
     const timeOut = setTimeout(() => {
@@ -38,7 +29,7 @@ function App() {
   return (
     <>
 
-      <div className="">
+      <div className="container">
         <NavigationBar />
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 overflow-x-scroll h-[90vh] lg:h-[50vh] ">
           <Editor
@@ -61,6 +52,7 @@ function App() {
           />
         </div>
         <div className="pane h-[50vh] border-2">
+          <p className='text-white text-2xl p-2 w-full bg-[#3D3D45]'>Priview</p>
           <iframe
             title='output'
             sandbox='allow-scripts'
@@ -73,6 +65,7 @@ function App() {
           />
         </div>
       </div>
+      <p></p>
     </>
   );
 }
