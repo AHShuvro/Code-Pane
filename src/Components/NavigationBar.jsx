@@ -42,7 +42,7 @@ const NavigationBar = () => {
                 <div>
                     <div ref={dropDownRef} className="relative mx-auto w-fit text-white">
                         <button onClick={() => setOpen((prev) => !prev)} className="rounded-sm w-24">Theme</button>
-                        <ul className={`${open ? 'visible' : 'invisible'} py-2 bg-[#3D3D45] absolute top-12 z-50 w-full space-y-1 rounded-sm shadow-md`}>
+                        <ul className={`${open ? 'visible' : 'invisible'} py-2 bg-[#3D3D45] absolute top-12 right-0 z-50 w-56 space-y-1 rounded-sm shadow-md`}>
                             {items.map((item, idx) => (
                                 <li
                                     key={idx}
