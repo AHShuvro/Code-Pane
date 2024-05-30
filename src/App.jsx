@@ -51,7 +51,7 @@ function App() {
             onChange={setJs}
           />
         </div>
-        <div className="pane h-[50vh] border-2">
+        <div className="pane h-[50vh] border-2 overflow-hidden mb-10">
           <p className='text-white text-2xl p-2 w-full bg-[#3D3D45]'>Priview</p>
           <iframe
             title='output'
